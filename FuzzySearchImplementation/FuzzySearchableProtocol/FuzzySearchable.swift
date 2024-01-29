@@ -46,10 +46,6 @@ extension FuzzySearchable {
             matchedParts.append(currentMatchedPart)
         }
 
-        print(matchedParts.reduce(1, { partialResult, reange in
-            reange.length + partialResult
-        }))
-
         if searchString.count == matchedParts.reduce(0, { partialResult, reange in
             reange.length + partialResult
         }) {
@@ -65,9 +61,7 @@ extension FuzzySearchable {
 
     func fuzzyMatch(query: String) -> FuzzySearchMatchResult {
         let characters = normaliseString()
-        dump(characters.characters.map({ xxx in
-            xxx.normalisedContent
-        }))
+
         return fuzzyMatch(query: query, characters: characters)
     }
 }
