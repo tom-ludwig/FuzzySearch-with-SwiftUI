@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61940BF72A1CD9980021E38F /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61940BF62A1CD9980021E38F /* FilesView.swift */; };
+		61B51F5C2A04D77B009980EA /* mockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 61B51F5B2A04D77B009980EA /* mockData.json */; };
 		61C0789429FECC9E00252DB9 /* FuzzySearchImplementationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0789329FECC9E00252DB9 /* FuzzySearchImplementationApp.swift */; };
 		61C0789629FECC9E00252DB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0789529FECC9E00252DB9 /* ContentView.swift */; };
 		61C0789829FECC9E00252DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C0789729FECC9E00252DB9 /* Assets.xcassets */; };
@@ -16,6 +18,12 @@
 		61C078B229FECDF400252DB9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078B129FECDF400252DB9 /* ViewModel.swift */; };
 		61C078B429FED58300252DB9 /* TestingData.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C078B329FED58300252DB9 /* TestingData.json */; };
 		61C078B629FED73300252DB9 /* FuzzySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078B529FED73300252DB9 /* FuzzySearch.swift */; };
+		61F954CF2B6832FE008A4404 /* String+HasPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CA2B6832FE008A4404 /* String+HasPrefix.swift */; };
+		61F954D02B6832FE008A4404 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CB2B6832FE008A4404 /* Models.swift */; };
+		61F954D12B6832FE008A4404 /* FuzzySearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CC2B6832FE008A4404 /* FuzzySearchable.swift */; };
+		61F954D22B6832FE008A4404 /* String+Normalise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CD2B6832FE008A4404 /* String+Normalise.swift */; };
+		61F954D32B6832FE008A4404 /* Collection+FuzzySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CE2B6832FE008A4404 /* Collection+FuzzySearch.swift */; };
+		61F954D52B6833B7008A4404 /* CachedFuzzySearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954D42B6833B7008A4404 /* CachedFuzzySearchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61940BF62A1CD9980021E38F /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
+		61B51F5B2A04D77B009980EA /* mockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockData.json; sourceTree = "<group>"; };
 		61C0789029FECC9E00252DB9 /* FuzzySearchImplementation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzySearchImplementation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C0789329FECC9E00252DB9 /* FuzzySearchImplementationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzySearchImplementationApp.swift; sourceTree = "<group>"; };
 		61C0789529FECC9E00252DB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +50,12 @@
 		61C078B129FECDF400252DB9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		61C078B329FED58300252DB9 /* TestingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingData.json; sourceTree = "<group>"; };
 		61C078B529FED73300252DB9 /* FuzzySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzySearch.swift; sourceTree = "<group>"; };
+		61F954CA2B6832FE008A4404 /* String+HasPrefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HasPrefix.swift"; sourceTree = "<group>"; };
+		61F954CB2B6832FE008A4404 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		61F954CC2B6832FE008A4404 /* FuzzySearchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzySearchable.swift; sourceTree = "<group>"; };
+		61F954CD2B6832FE008A4404 /* String+Normalise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Normalise.swift"; sourceTree = "<group>"; };
+		61F954CE2B6832FE008A4404 /* Collection+FuzzySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+FuzzySearch.swift"; sourceTree = "<group>"; };
+		61F954D42B6833B7008A4404 /* CachedFuzzySearchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedFuzzySearchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +99,13 @@
 			children = (
 				61C0789329FECC9E00252DB9 /* FuzzySearchImplementationApp.swift */,
 				61C0789529FECC9E00252DB9 /* ContentView.swift */,
+				61940BF62A1CD9980021E38F /* FilesView.swift */,
 				61C078B529FED73300252DB9 /* FuzzySearch.swift */,
 				61C078AE29FECCD500252DB9 /* DecodeJSON.swift */,
 				61C078B129FECDF400252DB9 /* ViewModel.swift */,
+				61F954C92B6832E6008A4404 /* FuzzySearchableProtocol */,
 				61C0789729FECC9E00252DB9 /* Assets.xcassets */,
+				61B51F5B2A04D77B009980EA /* mockData.json */,
 				61C078B329FED58300252DB9 /* TestingData.json */,
 				61C0789929FECC9E00252DB9 /* Preview Content */,
 			);
@@ -107,6 +126,19 @@
 				61C078A729FECCBE00252DB9 /* FuzzySearchImplementationTests.swift */,
 			);
 			path = FuzzySearchImplementationTests;
+			sourceTree = "<group>";
+		};
+		61F954C92B6832E6008A4404 /* FuzzySearchableProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				61F954CE2B6832FE008A4404 /* Collection+FuzzySearch.swift */,
+				61F954CC2B6832FE008A4404 /* FuzzySearchable.swift */,
+				61F954D42B6833B7008A4404 /* CachedFuzzySearchable.swift */,
+				61F954CB2B6832FE008A4404 /* Models.swift */,
+				61F954CA2B6832FE008A4404 /* String+HasPrefix.swift */,
+				61F954CD2B6832FE008A4404 /* String+Normalise.swift */,
+			);
+			path = FuzzySearchableProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C078B429FED58300252DB9 /* TestingData.json in Resources */,
+				61B51F5C2A04D77B009980EA /* mockData.json in Resources */,
 				61C0789B29FECC9E00252DB9 /* Preview Assets.xcassets in Resources */,
 				61C0789829FECC9E00252DB9 /* Assets.xcassets in Resources */,
 			);
@@ -212,9 +245,16 @@
 			files = (
 				61C0789629FECC9E00252DB9 /* ContentView.swift in Sources */,
 				61C078B629FED73300252DB9 /* FuzzySearch.swift in Sources */,
+				61940BF72A1CD9980021E38F /* FilesView.swift in Sources */,
 				61C078AF29FECCD500252DB9 /* DecodeJSON.swift in Sources */,
+				61F954D22B6832FE008A4404 /* String+Normalise.swift in Sources */,
 				61C078B229FECDF400252DB9 /* ViewModel.swift in Sources */,
+				61F954D52B6833B7008A4404 /* CachedFuzzySearchable.swift in Sources */,
 				61C0789429FECC9E00252DB9 /* FuzzySearchImplementationApp.swift in Sources */,
+				61F954D12B6832FE008A4404 /* FuzzySearchable.swift in Sources */,
+				61F954D32B6832FE008A4404 /* Collection+FuzzySearch.swift in Sources */,
+				61F954CF2B6832FE008A4404 /* String+HasPrefix.swift in Sources */,
+				61F954D02B6832FE008A4404 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

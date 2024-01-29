@@ -11,7 +11,17 @@ import SwiftUI
 struct FuzzySearchImplementationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Label("Levenshtein", systemImage: "person.3")
+                    }
+                
+                FilesView()
+                    .tabItem {
+                        Label("FuzzySearchable", systemImage: "doc")
+                    }
+            }
         }
     }
 }

@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var users: [ViewModel] = decodeJSON("TestingData.json")
     @State private var searchText: String = ""
-    var newUsers: [ViewModel] {
+    var sortedUsers: [ViewModel] {
         if searchText.isEmpty {
             return users
         } else {
@@ -20,16 +19,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(newUsers, id: \.id) { user in
-                    VStack(alignment: .leading) {
-                        Text(user.name)
-                            .font(.title2)
-                            .fontWeight(.medium)
-                        
-                        Text(user.description)
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                            .fontDesign(.monospaced)
+                ForEach(sortedUsers, id: \.id) { user in
+                    LazyVStack(alignment: .leading) {
+                        VStack(alignment: .leading) {
+                            Text(user.name)
+                                .fontDesign(.monospaced)
+                            
+                            Text(user.description)
+                                .font(.system(size: 8))
+                                .foregroundColor(.secondary)
+                                .fontDesign(.monospaced)
+                                .fontWeight(.light)
+                            
+                        }
                     }
                 }
             }

@@ -7,12 +7,13 @@
 
 import Foundation
 
-var testingData: [ViewModel] = decodeJSON("TestingData")
+var users: [ViewModel] = decodeJSON("mockData.json")
+var fileURL: [URLModel] = decodeJSON("TestingData.json")
 
 func decodeJSON<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
-    guard let fileURL = Bundle.main.url(forResource: "TestingData.json", withExtension: nil) else {
+    guard let fileURL = Bundle.main.url(forResource: "\(filename)", withExtension: nil) else {
         fatalError("Couldn't find \(filename)")
     }
     
@@ -25,6 +26,6 @@ func decodeJSON<T: Decodable>(_ filename: String) -> T {
     do {
         return try JSONDecoder().decode(T.self, from: data)
     } catch {
-        fatalError("Unresolved error while decoding data \(error.localizedDescription)")
+        fatalError("Unresolved error while decoding data: \(error)")
     }
 }
