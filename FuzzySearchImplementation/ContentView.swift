@@ -13,7 +13,7 @@ struct ContentView: View {
         if searchText.isEmpty {
             return users
         } else {
-            return FuzzySearch.search(query: searchText, in: users)
+            return users.search(searchString: searchText) ?? users
         }
     }
     var body: some View {

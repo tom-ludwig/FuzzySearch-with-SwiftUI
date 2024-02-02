@@ -1,5 +1,5 @@
 //
-//  ViewMdoel.swift
+//  ViewModel.swift
 //  FuzzySearchImplementation
 //
 //  Created by Tommy Ludwig on 30.04.23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ViewModel: Identifiable, Codable, FuzzySearchable {
+struct ViewModel: Identifiable, Codable, LevenshteinSearchable {
     var id: Int
     var name: String
     var description: String

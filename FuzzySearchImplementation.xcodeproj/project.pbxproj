@@ -15,9 +15,10 @@
 		61C0789B29FECC9E00252DB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C0789A29FECC9E00252DB9 /* Preview Assets.xcassets */; };
 		61C078A829FECCBE00252DB9 /* FuzzySearchImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078A729FECCBE00252DB9 /* FuzzySearchImplementationTests.swift */; };
 		61C078AF29FECCD500252DB9 /* DecodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078AE29FECCD500252DB9 /* DecodeJSON.swift */; };
-		61C078B229FECDF400252DB9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078B129FECDF400252DB9 /* ViewModel.swift */; };
+		61C078B229FECDF400252DB9 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078B129FECDF400252DB9 /* ViewModels.swift */; };
 		61C078B429FED58300252DB9 /* TestingData.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C078B329FED58300252DB9 /* TestingData.json */; };
 		61C078B629FED73300252DB9 /* FuzzySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C078B529FED73300252DB9 /* FuzzySearch.swift */; };
+		61C5981C2B6947EF00C2832C /* FuzzySearchLevenstein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5981B2B6947EF00C2832C /* FuzzySearchLevenstein.swift */; };
 		61F954CF2B6832FE008A4404 /* String+HasPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CA2B6832FE008A4404 /* String+HasPrefix.swift */; };
 		61F954D02B6832FE008A4404 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CB2B6832FE008A4404 /* Models.swift */; };
 		61F954D12B6832FE008A4404 /* FuzzySearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F954CC2B6832FE008A4404 /* FuzzySearchable.swift */; };
@@ -47,9 +48,10 @@
 		61C078A529FECCBE00252DB9 /* FuzzySearchImplementationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzySearchImplementationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C078A729FECCBE00252DB9 /* FuzzySearchImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzySearchImplementationTests.swift; sourceTree = "<group>"; };
 		61C078AE29FECCD500252DB9 /* DecodeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeJSON.swift; sourceTree = "<group>"; };
-		61C078B129FECDF400252DB9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		61C078B129FECDF400252DB9 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
 		61C078B329FED58300252DB9 /* TestingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingData.json; sourceTree = "<group>"; };
 		61C078B529FED73300252DB9 /* FuzzySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzySearch.swift; sourceTree = "<group>"; };
+		61C5981B2B6947EF00C2832C /* FuzzySearchLevenstein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzySearchLevenstein.swift; sourceTree = "<group>"; };
 		61F954CA2B6832FE008A4404 /* String+HasPrefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HasPrefix.swift"; sourceTree = "<group>"; };
 		61F954CB2B6832FE008A4404 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		61F954CC2B6832FE008A4404 /* FuzzySearchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzySearchable.swift; sourceTree = "<group>"; };
@@ -100,10 +102,11 @@
 				61C0789329FECC9E00252DB9 /* FuzzySearchImplementationApp.swift */,
 				61C0789529FECC9E00252DB9 /* ContentView.swift */,
 				61940BF62A1CD9980021E38F /* FilesView.swift */,
-				61C078B529FED73300252DB9 /* FuzzySearch.swift */,
+				61C5981B2B6947EF00C2832C /* FuzzySearchLevenstein.swift */,
 				61C078AE29FECCD500252DB9 /* DecodeJSON.swift */,
-				61C078B129FECDF400252DB9 /* ViewModel.swift */,
+				61C078B129FECDF400252DB9 /* ViewModels.swift */,
 				61F954C92B6832E6008A4404 /* FuzzySearchableProtocol */,
+				61C078B529FED73300252DB9 /* FuzzySearch.swift */,
 				61C0789729FECC9E00252DB9 /* Assets.xcassets */,
 				61B51F5B2A04D77B009980EA /* mockData.json */,
 				61C078B329FED58300252DB9 /* TestingData.json */,
@@ -187,7 +190,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					61C0788F29FECC9E00252DB9 = {
 						CreatedOnToolsVersion = 14.3;
@@ -248,12 +251,13 @@
 				61940BF72A1CD9980021E38F /* FilesView.swift in Sources */,
 				61C078AF29FECCD500252DB9 /* DecodeJSON.swift in Sources */,
 				61F954D22B6832FE008A4404 /* String+Normalise.swift in Sources */,
-				61C078B229FECDF400252DB9 /* ViewModel.swift in Sources */,
+				61C078B229FECDF400252DB9 /* ViewModels.swift in Sources */,
 				61F954D52B6833B7008A4404 /* CachedFuzzySearchable.swift in Sources */,
 				61C0789429FECC9E00252DB9 /* FuzzySearchImplementationApp.swift in Sources */,
 				61F954D12B6832FE008A4404 /* FuzzySearchable.swift in Sources */,
 				61F954D32B6832FE008A4404 /* Collection+FuzzySearch.swift in Sources */,
 				61F954CF2B6832FE008A4404 /* String+HasPrefix.swift in Sources */,
+				61C5981C2B6947EF00C2832C /* FuzzySearchLevenstein.swift in Sources */,
 				61F954D02B6832FE008A4404 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +317,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -373,6 +378,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
